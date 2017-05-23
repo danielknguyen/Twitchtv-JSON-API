@@ -1,0 +1,27 @@
+body {
+	background: url('https://cdn.senshudo.tv/images/uploads/news/2014/05/19/1400539292_twitch_twitch_tv_live_video_games_1920x1080_78885.jpg')no-repeat fixed right bottom;
+}
+#twitch-container {
+	border:1px solid #FFFFFF;
+	width:100%;
+}
+#twitch-header {
+	border:1px solid #FFFFFF;
+	width:60%;
+	margin:0 20%;
+}
+#twitch-all {
+	border:1px solid #FFFFFF;
+	width:60%;
+	margin:0 20%;
+}
+#twitch-online {
+	border:1px solid #FFFFFF;
+	width:60%;
+	margin:0 20%;
+}
+#twitch-offline {
+	border:1px solid #FFFFFF;
+	width:60%;
+	margin:0 20%;
+}
