@@ -6,9 +6,21 @@ body {
 	width:100%;
 }
 #twitch-header {
-	border:1px solid #FFFFFF;
+	border:1px solid #EEEEEE;
+	background:url('http://orig07.deviantart.net/2ab6/f/2012/340/6/f/ipad_platformer_mockup_by_cilein-d5mnr0r.jpg')no-repeat fixed;
+	opacity:0.9;
 	width:60%;
 	margin:0 20%;
+}
+.twitch-title {
+	font-family: 'Archivo Black', sans-serif;
+	color:#000000;
+}
+.twitch-logo {
+	background:url('http://www.mypomelo.it/puertopad/wp-content/uploads/2016/05/twitch-logo.png')no-repeat left center;
+	background-size:50px;
+	height:80px;
+	width:50px;
 }
 #twitch-all {
 	border:1px solid #FFFFFF;
@@ -29,10 +41,19 @@ body {
 	margin:2% 0;
 }
 .user-icon {
-	border:1px solid #FFFFFF;
+	border:2px solid #FFFFFF;
 	border-radius:50px;
-	height:75px;
-	width:75px;
+	height:65px;
+	width:65px;
+}
+.user-icon:hover {
+	border:4px solid #FFFFFF;
+}
+.user-username {
+	margin:25% auto;
+}
+.twitch-description {
+	margin:12% auto;
 }
 
 /*responsive CSS*/

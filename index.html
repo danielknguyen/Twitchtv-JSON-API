@@ -7,22 +7,37 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="styles/mobile.css">
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+
 </head>
 <body>
 	<!-- Twitch container -->
 	<div id="twitch-container" class="container">
 		<!-- Twitch title -->
 		<div id="twitch-header" class="col-sm-12 col-md-12">
-			<h1 class="twitch-title">Twitch Streamers</h1>	
+			<div class="twitch-logo-div col-sm-1 col-md-1">
+				<div class="twitch-logo"></div>
+			</div>
+			<h1 class="col-sm-9 col-md-9 twitch-title text-uppercase">Twitch Streamers</h1>
+			<div class="user-tabs col-sm-2 col-md-2">
+				<div class="all-online btn btn-sm btn-primary">All-On</div>
+				<div class="online btn btn-sm btn-success">Online</div>
+				<div class="offline btn btn-sm btn-danger">Offline</div>
+			</div>	
 		</div>
 		<!-- Twitch all online -->
 		<div id="twitch-all" class="col-sm-12 col-md-12">
-			<p>twitch all online</p>
+			<!-- <p>twitch all online</p> -->
 			<div class="img-div col-sm-3 col-md-3">
 				<div class="user-icon"></div>
 			</div>
-			<div class="user-username col-sm-3 col-md-3"></div>
-			<div class="user-description col-sm-6 col-md-6"></div>	
+			<div class="user-div col-sm-3 col-md-3">
+				<div class="user-username">Username</div>
+			</div>
+			<div class="user-description col-sm-6 col-md-6">
+				<div class="twitch-description">Here is the description</div>
+			</div>	
 		</div>
 		<!-- Twitch users who are only online -->
 		<div id="twitch-online" class="col-sm-12 col-md-12">
