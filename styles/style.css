@@ -1,15 +1,17 @@
 body {
-	background: url('https://hdwallsbox.com/wallpapers/l/1920x1080/79/twitch-twitch-tv-live-video-games-1920x1080-78885.jpg')no-repeat fixed bottom right;
+	background: url('http://pre11.deviantart.net/3f25/th/pre/f/2012/085/c/1/c1e830c9dfec5c784b61f777bd77b5e5-d4tzvzw.png')no-repeat fixed center;
 }
 #twitch-container {
 	margin-top:1%;
 	width:100%;
+	margin:none;
+	opacity:0.95;
 }
 #twitch-header {
-	background:url('http://orig07.deviantart.net/2ab6/f/2012/340/6/f/ipad_platformer_mockup_by_cilein-d5mnr0r.jpg')no-repeat;
+	background-color:#DADFE1;
 	width:60%;
 	margin:0 20%;
-	opacity:0.9;
+	opacity:0.95;
 }
 .twitch-title {
 	font-family: 'Archivo Black', sans-serif;
@@ -19,24 +21,20 @@ body {
 .twitch-logo {
 	background:url('http://www.mypomelo.it/puertopad/wp-content/uploads/2016/05/twitch-logo.png')no-repeat left center;
 	background-size:50px;
-	height:80px;
+	height:65px;
 	width:50px;
 }
-#twitch-online {
+#twitch-online, #twitch-offline {
 	border:1px solid #FFFFFF;
 	background-color:#1BBC9B;
 	color:#FFFFFF;
 	width:60%;
 	margin:0 20%;
-	opacity:0.9;
+	opacity:0.95;
+	margin-top:2px;
 }
 #twitch-offline {
-	border:1px solid #FFFFFF;
 	background-color:#446CB3;
-	color:#FFFFFF;
-	width:60%;
-	margin:0 20%;
-	opacity:0.9;
 }
 .img-div {
 	margin:2% 0;
@@ -54,6 +52,16 @@ body {
 .user-div,.user-description {
 	line-height:95px;
 }
+.twitch-link {
+	color:#FFFFFF;
+}
+.twitch-link:hover {
+	color:#000000;
+}
+.tabs {
+	color:#FFFFFF;
+	margin:1% 0;
+}
 
 /*responsive CSS*/
 @media screen and (max-width:449px) {
@@ -61,7 +69,7 @@ body {
 		background: url('https://cdn.senshudo.tv/images/uploads/news/2014/05/19/1400539292_twitch_twitch_tv_live_video_games_1920x1080_78885.jpg')no-repeat fixed top left;
 	}
 	.twitch-title {
-		font-size:2em;
+		font-size:1.75em;
 	}
 	.user-div,.user-description {
 		line-height:50px;
