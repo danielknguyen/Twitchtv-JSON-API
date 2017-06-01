@@ -57,13 +57,17 @@ $(document).ready(function(){
 						success: function(results){
 							console.log(results);
 
-							if (results.status === 422) {
-								var channelUnavailable = results.message;
+							var channelUnavailable = results.message;
+
+							if (results.status === 400 || results.status === 401 || results.status === 403 || results.status === 404 || results.status === 422 || results.status === 429 || results.status === 500 || results.status === 503) {
+
 								$('#search-form')
-									.prepend('<p class="user-error text-center" style="color:red">' + channelUnavailable + '</p>')
+									.prepend('<p class="user-error text-center" style="color:red">*' + channelUnavailable + '*</p>');
+
 								$('.user-error')
 									.delay('3000')
 									.fadeOut('slow');
+
 							} else {
 								if (results.logo != null) {
 								imageSrc = results.logo;
