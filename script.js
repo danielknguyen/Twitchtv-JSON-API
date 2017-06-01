@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var twitchUsers = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+	var twitchUsers = ["ESL_SC2", "OgamingSC2", "freecodecamp", "noobs2ninjas"];
 	var isOnline = 'streams/';
 	var isOffline = 'channels/';
 
