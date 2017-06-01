@@ -71,13 +71,5 @@ $(document).ready(function(){
 				}
 			}
 		})
-	})
-	$('#online').on('click', function(){
-					('#twitch-offline').hide();
-					('#twitch-online').show();
-				})
-				$('#offline').on('click', function(){
-					('#twitch-online').hide();
-					('#twitch-offline').show();
-				})  
+	}) 
 });		

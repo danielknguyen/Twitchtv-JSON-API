@@ -1,8 +1,5 @@
-body {
-	background: url('https://static.lolwallpapers.net/2016/01/Twitch-Fan-Art-By-Paulikaiser.png')no-repeat fixed center;
-}
 #twitch-container {
-	margin-top:1%;
+	background: url('https://static.lolwallpapers.net/2016/01/Twitch-Fan-Art-By-Paulikaiser.png')no-repeat fixed center;
 	width:100%;
 	margin:none;
 	opacity:0.95;
@@ -10,7 +7,8 @@ body {
 #twitch-header {
 	background-color:#DADFE1;
 	width:60%;
-	margin:0 20%;
+	margin:.5% 20%;
+	margin-top:1%;
 	opacity:0.95;
 }
 .twitch-title {
@@ -20,7 +18,7 @@ body {
 }
 .twitch-logo {
 	background:url('http://www.mypomelo.it/puertopad/wp-content/uploads/2016/05/twitch-logo.png')no-repeat left center;
-	background-size:50px;
+	background-size:40px;
 	height:65px;
 	width:50px;
 }
@@ -54,19 +52,19 @@ body {
 }
 .twitch-link {
 	color:#FFFFFF;
+	font-size:1.25em;
 }
 .twitch-link:hover {
 	color:#000000;
 }
 .tabs {
 	color:#FFFFFF;
-	margin:1% 0;
 }
 
 /*responsive CSS*/
 @media screen and (max-width:449px) {
-	body {
-		background: url('https://cdn.senshudo.tv/images/uploads/news/2014/05/19/1400539292_twitch_twitch_tv_live_video_games_1920x1080_78885.jpg')no-repeat fixed top left;
+	#twitch-container {
+		background:#9541a5;
 	}
 	.twitch-title {
 		font-size:1.75em;
@@ -75,14 +73,22 @@ body {
 		line-height:50px;
 	}
 }
-@media (min-width:450px) and (max-width:768px) {
-	body {
-		background: url('https://cdn.senshudo.tv/images/uploads/news/2014/05/19/1400539292_twitch_twitch_tv_live_video_games_1920x1080_78885.jpg')no-repeat fixed top left;
+@media (min-width:450px) and (max-width:925px) {
+	#twitch-container {
+		background:#9541a5;
+	}
+	.twitch-logo {
+		background-size:35px;
+		height:45px;
+		width:40px;
 	}
 	.twitch-title {
-		font-size:2.5em;
+		font-size:2em;
 	}
 	.user-div,.user-description {
 		line-height:65px;
+	}
+	.twitch-link {
+		font-size:1em;
 	}
 }
