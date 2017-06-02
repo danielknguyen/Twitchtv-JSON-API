@@ -102,9 +102,15 @@ $(document).ready(function(){
 			var newUser = $('.twitch-search').val();
 
 			if (twitchUsers.indexOf(newUser) > -1) {
-				alert('Twitch user already exist')
+				$('#search-form')
+					.prepend('<p class="user-error text-center" style="color:red">*Twitch user already exist*</p>');
+
+				$('.user-error')
+					.delay('3000')
+					.fadeOut('slow');
 			} else {
 				runTwitchSearch(newUser);
+				twitchUsers.push(newUser);
 			}
 		}
 
@@ -114,9 +120,11 @@ $(document).ready(function(){
 		e.preventDefault();
 		var newUser = $('.twitch-search').val();
 		if (twitchUsers.indexOf(newUser) > -1) {
-				alert('Twitch user already exist')
+				$('#search-form')
+					.prepend('<p class="user-error text-center" style="color:red">*Twitch user already exist*</p>');
 			} else {
 				runTwitchSearch(newUser);
+				twitchUsers.push(newUser);
 			}
 	})
 });		

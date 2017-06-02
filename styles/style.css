@@ -72,9 +72,6 @@ body {
 
 /*responsive CSS*/
 @media screen and (max-width:449px) {
-	/*body, #twitch-container {
-		background:#9541a5;
-	}*/
 	.twitch-title {
 		font-size:2em;
 	}
@@ -92,9 +89,6 @@ body {
 	}
 }
 @media (min-width:450px) and (max-width:925px) {
-	/*body, #twitch-container {
-		background:#9541a5;
-	}*/
 	.twitch-logo {
 		background-size:35px;
 		height:45px;

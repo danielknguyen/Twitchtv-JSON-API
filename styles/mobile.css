@@ -1,3 +1,6 @@
+body {
+	background: #9541a5;
+}
 .twitch-logo {
 	background-size:60px;
 	width:60px;
@@ -13,7 +16,7 @@
 }
 #twitch-header, #twitch-online, #twitch-offline {
 	width:100%;
-	margin:.5%;
+	margin:.5% 0;
 }
 .twitch-search {
 	padding:2%;
