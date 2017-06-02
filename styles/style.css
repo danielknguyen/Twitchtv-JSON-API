@@ -73,7 +73,9 @@ body {
 	color: #FFFFF;
 	font-size:1.2em;
 }
-
+.user-success {
+	display:none;
+}
 /*responsive CSS*/
 @media screen and (max-width:449px) {
 	.twitch-title {

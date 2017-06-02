@@ -48,6 +48,7 @@ $(document).ready(function(){
 					$('#twitch-container').append(users);
 					var newUser = $('.twitch-search').val().toLowerCase();
 					twitchUsers.push(newUser);
+					$('.twitch-search').val('');
 
 				} else {
 					$.ajax({
@@ -63,10 +64,13 @@ $(document).ready(function(){
 
 							if (results.status === 400 || results.status === 401 || results.status === 403 || results.status === 404 || results.status === 422 || results.status === 429 || results.status === 500 || results.status === 503) {
 
+								$('.user-success').hide();
+								return false;
+
 								$('.user-error')
 									.text(channelUnavailable)
 									.show();
-								return false;									
+									
 							} else {
 								$('.user-error')
 									.hide();
@@ -90,6 +94,8 @@ $(document).ready(function(){
 							$('#twitch-container').append(users);
 							var newUser = $('.twitch-search').val().toLowerCase();
 							twitchUsers.push(newUser);
+							$('.twitch-search').val('');
+
 							
 						}
 					})
@@ -108,11 +114,14 @@ $(document).ready(function(){
 				return false;
 
 			} else if (twitchUsers.indexOf(newUser) > -1) {
+				$('.user-success').hide();
 				$('.user-error')
-					.text('*Twitch user already exist*')
+					.text('*Twitch user already exist on the list*')
 					.show();
 			} else {
 				runTwitchSearch(newUser);
+				$('.user-error').hide();
+				$('.user-success').show();
 			}
 		}
 
@@ -126,10 +135,12 @@ $(document).ready(function(){
 
 		} else if (twitchUsers.indexOf(newUser) > -1) {
 			$('.user-error')
-				.text('*Twitch user already exist*')
+				.text('*Twitch user already exist on the list*')
 				.show();
 		} else {
 			runTwitchSearch(newUser);
+			$('.user-error').hide();
+			$('.user-success').show();
 		}
 	})
 });		
