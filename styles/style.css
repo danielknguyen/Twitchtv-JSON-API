@@ -109,7 +109,6 @@ body {
 	}
 	#twitch-header, #twitch-online, #twitch-offline {
 		width:70%;
-		margin:.5% 15%;
-		margin-top:1%;
+		margin:0 15%;
 	}
 }
