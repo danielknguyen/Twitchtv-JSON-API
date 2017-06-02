@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	var twitchUsers = ["ESL_SC2", "OgamingSC2", "freecodecamp", "noobs2ninjas"];
+	var twitchUsers = ["esl_sc2", "ogamingsc2", "freecodecamp", "noobs2ninjas"];
 	var isOnline = 'streams/';
 	var isOffline = 'channels/';
 
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 					var logo = '<div class="img-div col-sm-2 col-md-2"><img class="user-icon" src="' + imageSrc + '"></div>';
 					var userStatus = trucateString(results.stream.channel.status);
-					var userName = '<div class="user-div col-sm-2 col-md-2"><div class="user-username"><a class="twitch-link" target="_blank" href="' + results.stream.channel.url + '">' + results.stream.channel.display_name + '</a></div></div>';
+					var userName = '<div class="user-div col-sm-2 col-md-2"><div class="user-username"><a class="twitch-link" target="_blank" href="' + results.stream.channel.url + '">' + results.stream.channel.display_name.toLowerCase() + '</a></div></div>';
 
 					function trucateString(str) {
 						var newString = "";
@@ -77,7 +77,7 @@ $(document).ready(function(){
 
 								var logo = '<div class="img-div col-sm-2 col-md-2"><img class="user-icon" src="' + imageSrc + '"></div>';
 								var userStatus = 'Offline';
-								var userName = '<div class="user-div col-sm-2 col-md-2"><div class="user-username"><a class="twitch-link" target="_blank" href="' + results.url + '">' + results.name + '</a></div></div>';
+								var userName = '<div class="user-div col-sm-2 col-md-2"><div class="user-username"><a class="twitch-link" target="_blank" href="' + results.url + '">' + results.name.toLowerCase() + '</a></div></div>';
 								var description = '<div class="user-description col-sm-8 col-md-8"><div class="twitch-description">' + userStatus + '</div></div>';
 
 								var users = '<div id="twitch-offline" class="col-sm-12 col-md-12 text-center">';
@@ -99,7 +99,8 @@ $(document).ready(function(){
 		if(event.keyCode === 13) {
 			e.preventDefault();
 
-			var newUser = $('.twitch-search').val();
+			var newUser = $('.twitch-search').val().toLowerCase();
+			console.log(newUser);
 
 			if (twitchUsers.indexOf(newUser) > -1) {
 				$('#search-form')
@@ -118,7 +119,8 @@ $(document).ready(function(){
 
 	$('.button-search').on('click',function(e){
 		e.preventDefault();
-		var newUser = $('.twitch-search').val();
+		var newUser = $('.twitch-search').val().toLowerCase();
+		console.log(newUser);
 		if (twitchUsers.indexOf(newUser) > -1) {
 				$('#search-form')
 					.prepend('<p class="user-error text-center" style="color:red">*Twitch user already exist*</p>');
